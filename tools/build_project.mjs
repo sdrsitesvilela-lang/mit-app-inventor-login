@@ -65,7 +65,18 @@ const authJson = () => method('WebAuth', 'JsonObjectEncode', [dictionary(
 )]);
 const authUrl = mode => join(text(`https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=`), getGlobal('firebaseApiKey'));
 const setBusy = (button, busy, next = '') => setProp(button, 'Enabled', bool(!busy), 'boolean', next);
-const show = (label, message, color, next = '') => setProp(label, 'Text', text(message), 'text', setProp(label, 'TextColor', text(color), 'number', next));
+// Color properties require a typed color block. Passing a text block containing
+// &H... makes App Inventor disconnect the value during import.
+const colorBlock = color => {
+  const colors = {
+    '&HFFD32F2F': ['color_red', '#ff0000'],
+    '&HFF2E7D32': ['color_green', '#009900'],
+    '&HFF3949AB': ['color_blue', '#0000ff'],
+  };
+  const [type, value] = colors[color];
+  return `<block type="${type}"><field name="COLOR">${value}</field></block>`;
+};
+const show = (label, message, color, next = '') => setProp(label, 'Text', text(message), 'text', setProp(label, 'TextColor', colorBlock(color), 'number', next));
 
 function requestAuth(mode, button, label) {
   const headers = `<block type="lists_create_with"><mutation items="1"></mutation><value name="ADD0"><block type="lists_create_with"><mutation items="2"></mutation><value name="ADD0">${text('Content-Type')}</value><value name="ADD1">${text('application/json; charset=UTF-8')}</value></block></value></block>`;
