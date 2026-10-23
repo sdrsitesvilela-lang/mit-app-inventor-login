@@ -106,7 +106,7 @@ const loginComponents = [
     ]),
     component('EspacoInferior', 'Label', C.label, { Text: '', Width: '-2', Height: '24' }),
   ]),
-  component('FirebaseDB1', 'FirebaseDB', C.firebase, { FirebaseURL: 'DEFAULT', FirebaseToken: '', ProjectBucket: 'login_escolar' }),
+  component('FirebaseDB1', 'FirebaseDB', C.firebase, { FirebaseURL: 'https://mit-app-inventor-banco-master-default-rtdb.firebaseio.com/', FirebaseToken: '', ProjectBucket: 'login_escolar' }),
   component('WebAuth', 'Web', C.web), component('Notifier1', 'Notifier', C.notifier),
 ];
 
@@ -131,7 +131,7 @@ const registrationComponents = [
     ]),
     component('EspacoInferior', 'Label', C.label, { Text: '', Width: '-2', Height: '24' }),
   ]),
-  component('FirebaseDB1', 'FirebaseDB', C.firebase, { FirebaseURL: 'DEFAULT', FirebaseToken: '', ProjectBucket: 'login_escolar' }),
+  component('FirebaseDB1', 'FirebaseDB', C.firebase, { FirebaseURL: 'https://mit-app-inventor-banco-master-default-rtdb.firebaseio.com/', FirebaseToken: '', ProjectBucket: 'login_escolar' }),
   component('WebAuth', 'Web', C.web), component('Notifier1', 'Notifier', C.notifier),
 ];
 

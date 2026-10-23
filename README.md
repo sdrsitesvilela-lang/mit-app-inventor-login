@@ -1,6 +1,6 @@
 # Login Firebase Seguro — MIT App Inventor 2
 
-Projeto escolar com duas telas, cadastro e login assíncronos. O arquivo final, com layout responsivo e blocos de cores corrigidos, é `LoginFirebaseFinal.aia`.
+Projeto escolar com duas telas, cadastro e login assíncronos. O arquivo final é `LoginFirebaseFINAL_CORRIGIDO.aia`.
 
 ## Conectar ao seu Firebase
 
@@ -8,7 +8,7 @@ Projeto escolar com duas telas, cadastro e login assíncronos. O arquivo final, 
 2. Crie o **Realtime Database**. Durante testes escolares, configure o acesso ao bucket `login_escolar`; antes de publicar, aplique regras adequadas ao seu projeto.
 3. Importe o `.aia` no MIT App Inventor 2.
 4. Em **Screen1** e **Screen2**, selecione `FirebaseDB1` e informe a mesma `FirebaseURL` e o mesmo `ProjectBucket` (`login_escolar`, ou outro nome igual nas duas telas). Use `FirebaseToken` apenas se a sua configuração legada realmente exigir.
-5. Em **Project Settings > General > Your apps > Web app**, copie a **Web API Key**. Nos blocos das duas telas, substitua `COLE_SUA_WEB_API_KEY` na variável global `firebaseApiKey`.
+5. Em **Project Settings > General > Your apps > Web app**, copie a **Web API Key**. O arquivo enviado ainda continha `COLE_SUA_WEB_API_KEY` nas duas telas; substitua esse marcador na variável global `firebaseApiKey` de ambas.
 
 Nenhuma URL, token ou chave real é incluída no projeto.
 
