@@ -1,0 +1,9 @@
+{
+  "name": "login-firebase-seguro-aia",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node tools/build_project.mjs && cd aia-src && zip -q -r ../LoginFirebaseSeguro.aia youngandroidproject src",
+    "test": "node tools/validate_project.mjs"
+  }
+}
