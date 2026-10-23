@@ -1,0 +1,9 @@
+Validação estática de LoginFirebasePRONTO.aia
+ZIP íntegro.
+Screen1: 498 blocos, 9 eventos únicos, 17 cores tipadas; entradas obrigatórias e referências verificadas. Visual preservado.
+Screen2: 497 blocos, 9 eventos únicos, 17 cores tipadas; entradas obrigatórias e referências verificadas. Visual preservado.
+API Key original preservada e igual nas duas telas; valor não exibido.
+Regras JSON válidas, acesso global negado, caminhos por UID e identidade do nome.
+PostText/PatchText/TimedOut e tipos de blocos novos conferidos no código-fonte oficial do MIT.
+NÃO executado: importação no editor, compilação APK, emulador de regras, Firebase real, concorrência em aparelhos.
+Nenhuma configuração remota alterada.

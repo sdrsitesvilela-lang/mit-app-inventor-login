@@ -1,0 +1,28 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "login_escolar": {
+      "usernames": {
+        "$name": {
+          ".read": "auth != null && data.child('uid').val() === auth.uid",
+          ".write": "auth != null && auth.token.email === $name + '@login-escolar.example' && newData.exists() && (!data.exists() || data.child('uid').val() === auth.uid) && newData.child('uid').val() === auth.uid",
+          ".validate": "$name.matches(/^[a-z0-9_]{3,32}$/) && newData.hasChildren(['username', 'uid'])",
+          "username": {".validate": "newData.isString() && newData.val() === $name"},
+          "uid": {".validate": "newData.isString() && newData.val() === auth.uid"},
+          "$other": {".validate": false}
+        }
+      },
+      "users": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid && newData.exists() && (!data.exists() || data.child('username').val() === newData.child('username').val())",
+          ".validate": "newData.hasChildren(['username', 'uid']) && auth.token.email === newData.child('username').val() + '@login-escolar.example'",
+          "username": {".validate": "newData.isString() && newData.val().matches(/^[a-z0-9_]{3,32}$/)"},
+          "uid": {".validate": "newData.isString() && newData.val() === $uid"},
+          "$other": {".validate": false}
+        }
+      }
+    }
+  }
+}
