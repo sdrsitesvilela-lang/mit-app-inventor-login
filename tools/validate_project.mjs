@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
-const aia = new URL('../LoginFirebaseSeguro.aia', import.meta.url);
+const aia = new URL('../LoginFirebaseSeguroCorrigido.aia', import.meta.url);
 if (!fs.existsSync(aia)) throw new Error('Execute npm run build primeiro.');
 const listing = execFileSync('unzip', ['-Z1', aia.pathname], { encoding: 'utf8' });
 for (const required of ['youngandroidproject/project.properties', 'Screen1.scm', 'Screen1.bky', 'Screen2.scm', 'Screen2.bky']) {

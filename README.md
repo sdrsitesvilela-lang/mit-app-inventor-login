@@ -1,6 +1,6 @@
 # Login Firebase Seguro — MIT App Inventor 2
 
-Projeto escolar com duas telas, cadastro e login assíncronos. O arquivo pronto para importação é `LoginFirebaseSeguro.aia`.
+Projeto escolar com duas telas, cadastro e login assíncronos. O arquivo atualizado, com layout responsivo corrigido, é `LoginFirebaseSeguroCorrigido.aia`.
 
 ## Conectar ao seu Firebase
 
